@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>	</title>
+</head>
+<body>
+	<script>
+		alert(1);
+		alert("344566");
+		alert('898979766');
+		console.log('风景优美');
+		document.write('风景优美');
+		document.write('<h1>风景优美</h1>')
+	</script>
+	<script>
+		var a;
+		a=10;
+		alert(a);
+		// var a;
+		a=1000000000000000000;
+		alert(a);
+		// alert(b)
+		x=200;
+		alert(x)
+	</script>
+	<!-- 数据类型 --><!-- 数据类型 --><!-- 数据类型 --><!-- 数据类型 -->
+	<script>
+		alert(Number.MAX_VALUE);
+		alert(Number.MIN_VALUE);
+		var num1=50;
+		var num2=40;
+		var info="我们班由两个班组成，第一个班有"+num1+"人,第二个班有"+num1+"人,总共有"+(num1+num2)+"人";
+		alert(info);
+		var a=20;
+		alert(a++);
+		alert(++a);
+		alert(++a+2);
+		alert(a++);
+		alert(a);
+		
+	</script>
+	<script>
+		var num1=undefined;
+		var num2=null;
+		alert(num1==num2)
+		
+		// alert(true=>1)
+	</script>
+	<script>
+	// 2017.09.05
+	var num=40;
+	if (num>10) {
+		alert('djcz')
+	}
+	if (num<30) {
+		alert('请问儿童节上岛咖啡空管局all累死\n俺都会令你')
+	}else{
+		alert('俺都会令你')
+	}
+	
+	
+	// 多路分支
+	
+
+
+
+	var score=prompt('请输入你的成绩','**')
+	if (score>=90 && score<=100) {
+		alert('优秀')
+	}else if (score>=80 && score<90) {
+		alert('良好')
+	}else if (score>=70 && score<80) {
+		alert('中等')
+	}else if (score>=60 && score<70) {
+		alert('及格')
+	}else if (score>=0 && score<60) {
+		alert('不及格')
+	}else {
+		alert('您输入的有误，请重新输入')
+	}
+	
+	var week=1*prompt('请输入星期',1);
+	switch(week){
+		case 1 :
+		alert('一')
+		break;
+
+		case 2 :
+		alert('二')
+		break;
+
+		case 3 :
+		alert('三')
+		break;
+
+		case 4 :
+		alert('四')
+		break;
+
+		case 5 :
+		alert('五')
+		break;
+
+		case 6 :
+		alert('六')
+		break;
+
+		case 7 :
+		alert('七')
+		break;
+
+		default:
+    	alert('您输入的有误，请重新输入')
+	}
+
+
+	// // 循环	循环	循环	循环	循环	循环	循环
+	for (var i = 1;i <= 10; i++) {
+		alert(i)
+	}
+	var sum=0
+	for (var i = 1; i < 11; i++) {
+		sum+=i
+		alert(sum)
+	}
+	// // 偶数
+	var sum=0
+	for (var i = 0;i < 11; i+=2) {
+		sum+=i
+	}
+	alert(sum)
+	// 奇数
+	var sum=0
+	for (var i = 1;i < 11; i+=2) {
+		sum+=i
+	}
+	alert(sum)
+
+	// </script>
+	// <script> 
+	// // 表格表格表格表格表格表格表格表格
+	// // 
+	// // 
+	// table(10,10);
+	// table();
+	// 任意行任意列-函数体变量-形参-实参
+	// 				形参
+	// function table(rows,cols){
+	// 	var table='<table>'
+	// 		for(var i=1;i<rows;i++){
+	// 			table+='<table border=1 cellspacing=0><tr>';
+	// 				for(var j=1;j<=cols;j++){
+	// 					table+='<td>'+j+'*'+i+'='+(i*j)+'</td>'				
+	// 				}
+	// 			table+='</tr></table>'
+	// 		}
+	// 		document.write(table);
+	// }
+	
+
+// 金字塔	金字塔	金字塔	金字塔
+	zi(10);
+	function zi(row){
+		// var row=5;
+		for(i=1;i<=row;i++){
+			for(var j=1;j<=row-i;j++){
+				document.write('&nbsp')
+			}
+			for(var j=1;j<=2*i-1;j++){
+				document.write('*')
+			}
+		document.write('<br/>')
+		}
+	}
+
+	// 1 1 2 3 5 8 13 21.....<100
+	shu(100000);
+	function shu(rows1){
+		var i=0,j=1;
+		for(var k=1;k<=rows1;){
+			document.write(k+'&nbsp')
+			k=i+j;
+			i=j;
+			j=k;
+		}
+	}
+
+	//表格
+	biao(20,20);
+	function biao(rows2,cols2){
+	document.write('<table border=1 cellspacing=0 align=center>')
+			for (var i = 1; i <= rows2; i++) {
+				if (i%2==0) {
+					var color='red';
+				}else{
+					var color='yellow';
+				}
+				document.write('<tr align=center >')
+					for(var j=1; j<=cols2; j++) {
+						document.write('<td bgcolor='+color+'>'+i+'-'+j+'</td>')
+					}
+				document.write('</tr>')
+				document.write('<br/>')
+		}
+		document.write('</table>')
+		}	
+		// 比较大小比较大小比较大小比较大小比较大小比较大小
+	var bbb=[1,2,3,4,5,6]
+	zu1(bbb);
+	function zu1(asq){
+	var asq;
+	var max=[0]
+	for(var i=1;i<asq.length;i++){
+		if(max<asq[i]){
+			max=asq[i];
+		}
+	}
+	console.log(max);
+	}
+// 排序排序排序排序排序排序排序排序排序
+	var bbq=[13,25,38,44,51,62,79,80,9];
+	zu2(bbq);
+	function zu2(asd){
+	// var asd=[13,25,38,44,51,62,79,80,9];
+	for(var i=0;i<asd.length;i++){
+		for(var j=i+1;j<asd.length;j++){
+			if (asd[i]<asd[j]) {
+				var temp=asd[j]
+				asd[j]=asd[i]
+				asd[i]=temp;
+			}
+		}
+	}
+	console.log(asd);
+	}
+	// 数组数组数组数组数组数组数组数组数组    去空
+	var arr=[1,2,,4,5,6,,8,9,,10,,45];
+	zu3(arr);
+	function zu3(qqq){
+		var newarr=[];
+		var j=0;
+	for(var i=0;i<qqq.length;i++){
+			if (qqq[i]!==undefined) {
+				newarr[j]=qqq[i];
+				j++;
+			}
+	}
+	console.log(newarr)
+	}
+
+	var arr=[1,2,,4,5,6,,8,9];
+	var newarr=[]
+	for(var i=0;i<arr.length;i++){
+		// if(arr[i]!==undefined){
+		// 	newarr[newarr.length]=arr[i];
+		if((typeof arr[i]) !=='undefined'){		
+		//注意这里的undefined的是字符串
+			newarr[newarr.length]=arr[i];
+
+		}
+	// }
+	}
+	document.write(newarr);
+
+
+
+
+
+
+
+
+
+// 取最大值
+	var zhangsan=[70,80,90];
+	var lisi=[78,89,97];
+	var wangwu=[45,55,67];
+	var classes=[zhangsan,lisi,wangwu]
+	var max=classes[0][0]
+	// console.log(classes[0][0]);
+	for(var i=0;i<classes.length;i++){
+		for(var j = 0;j < classes[i][j];j++){
+			if (max<classes[i][j]) {
+				max=classes[i][j]
+			}
+		}
+	}
+	console.log(max);
+	</script>
+</body>
+</html>

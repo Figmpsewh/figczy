@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+	//给数组最后添加一个
+	var arr=[1,2,4,56,34,18]
+	fn(arr,0,9);
+function fn(arr){
+	for(var i=1;i<arguments.length;i++){
+		arr[arr.length]=arguments[i]
+	}
+	console.log(arr)
+}
+// var arr=[1,2,3,4,5,6,7]
+// sort('<',arr);
+// sort(arr);
+// function sort(arr,type){
+// 	if (type==undefined) {
+// 		type='<'
+// 	}
+// 	if(type=='<'){
+// 		sortUp(arr){
+
+// 		}else if (type=='>') {
+// 			sortDown(arr);
+// 		}
+// 	}
+// }
+// 判断数组存在某一个特定值，存在true，falsereturn的用法
+// var arr=[1,2,3,4,5,6,7];
+// var result=arr[volue];
+// function fn(arr,volue){
+// 	for(var i=0;i<arr.length;i++){
+// 		if (arr[i]==volue) {
+// 			return true;
+// 		}
+// 	}
+// 	return false;
+// }
+// 把数组转换成字符串
+var arr=[1,2,3,4,5,6,7,8];
+var bbb=join(arr,'+');
+console.log(bbb)
+function join(arr,str){
+	var result='';
+	for(var i=0;i<arr.length;i++){
+		if (i<arr.length-1) {
+			result+=arr[i]+str;
+		}else{
+			result+=arr[i];
+		}
+	}
+return result;
+}
+// 筛选数组里的偶数元素
+var arr=[1,2,3,4,5,6,7,8]
+var sss=filed(arr);
+console.log(sss);
+function filed(arr){
+	var newarr=[];
+	for(var i=0;i<arr.length;i++){
+		if (arr[i]%2==0) {
+			newarr[newarr.length]=arr[i];
+		}
+	}
+	return newarr;
+}
+aa(4.6);
+function aa(num1,num2){
+	return num1*3+num2;
+}
+function bb(num1,num2){
+	return num1+num2;
+}
+function cc(num1,num2){
+	return num1*5+num2;
+}
+function match(num1,num2,fn){
+	return fn(num1,num2);
+}
+var result=match(4,6,aa)
+console.log(result);
+
+// 映射 map
+var arr=[1,2,3,4,5,6,7,8]
+var result=map(arr,function(value){
+	return value*2;
+})
+console.log(result);
+function map(arr,fn){
+var newarr=[];
+for(var i=0;i<arr.length;i++){
+	newarr[newarr.length]=fn(arr[i]);
+}
+return newarr
+}
+// 回调函数回调函数回调函数回调函数回调函数
+var arr=[1,2,3,4,5,6,7,8,9];
+function filter(arr,big){
+	var newarr=[];
+	for(var i=0;i<arr.length;i++){
+		if(big(arr[i])){
+			newarr[newarr.length]=arr[i];
+		}
+	}
+	return newarr;
+}
+var result=filter(arr,function(value){2
+	return value>4;
+})
+console.log(result);
+
+
+//确定数组中某一特定值出现的位置
+var arr=[1,2,0,4,8,3,6,];
+var result=indexof(arr,8);
+console.log(result);
+function indexof(arr,one){
+	for(var i=0;i<arr.length;i++){
+		if (arr[i]==one) {
+			return i;
+		}
+	}
+	return -1;
+}
+//确定数组中相同的值出现的最后一个位置
+var arr=[2,0,4,8,5,3,3,7,6,0,8];
+lastindexof(arr,8);
+console.log(lastindexof(arr,8));
+function lastindexof(arr,value){
+	for(var i=arr.length-1;i>-1;i--){
+		if(arr[i]==value){
+			return i;
+		}
+	}
+	return -1;
+}
+
+
+var arr=[1,2,3,4,5,6,7,8];
+var result=reverse(arr);
+console.log(result);
+function reverse(arr){
+	var newarr=[];
+	for(var i=arr.length;i>-1;i--){
+		push(newarr,arr[i]);
+	}
+	return newarr;
+}
+function push(arr,...rest){
+	for(var i=0;i<rest.length;i++){
+		arr[arr.length]=rest[i];
+	}
+}
+
+// 万能的添加或者删除
+// 
+// 
+// 删除
+var arr=[2,4,5,7,8,9,1,3,6,7];
+function spliceCancle(arr,pos,num){
+	var newarr=[];
+	for(var i=0;i<arr.length;i++){
+		if(i>=pos && i<pos+num){
+			continue;
+		}
+		newarr[newarr.length]=arr[i];
+	}
+	return newarr;
+}
+var result=splice(arr,3,4);
+console.log(result);
+
+// 万能添加
+var arr=[2,4,5,7,8,9,1,3,6];
+var result=spliceAdd(arr,3,'x','y','z')
+console.log(result)
+function spliceAdd(arr,pos,...rest){
+	var newarr=[];
+	// 把原来数组pos前的元素放到新数组中
+	for(var i=0;i<pos;i++){
+		newarr[newarr.length]=arr[i];
+	}
+	// 把需要添加的元素添加到新数组中
+	for(var i=0;i<rest.length;i++){
+		newarr[newarr.length]=rest[i];
+	}
+	// 把原来数组pos后的元素放到新数组中
+	for(var i=pos;i<arr.length;i++){
+		newarr[newarr.length]=arr[i];
+	}
+	return newarr;
+}
+// var arr=[2,4,5,7,8,9,1,3,6,0,9,12];
+function splice(arr,pos,num,...rest){
+	var newarr = spliceCancle(arr,pos,num);
+	if(rest.length>0){
+		newarr=spliceAdd(newarr,pos,...rest);
+	}
+	return newarr;
+}
+
+console.log(splice(arr,4,3,'x','y','z'));
+
+//some 只要有一个条件满足即可弹出true
+var arr=[1,2,3,4,5,6,7,8];
+var result=some(arr,function(value){
+	return value<5;
+})
+console.log(result);
+function some(arr,fn){
+	for(var i=0;i<arr.length;i++){
+		if(fn(arr[i])){
+			return true;
+		}
+	}
+	return false;
+}
+//every 所有的条件满足会弹出true
+var arr=[1,2,3,4,5,6,7,8];
+var result=every(arr,function(value){
+	return value<6;
+})
+console.log(result);
+function every(arr,fn){
+	for(var i=0;i<arr.length;i++){
+		if (!fn(arr[i])) {
+			return false;
+		}
+	}
+	return true;
+}
+// 递归函数 自己调用自己本身，递归不是循环
+fn(1);
+function fn(num){
+	if(num<5){
+		fn(++num)
+	}
+	alert(num);
+}
+
+// (浅拷贝)对应的是地址
+var arr=[1,2,3,4,5];
+var arr1=arr;
+arr1[1]='a';
+arr[3]='x';
+console.log(arr1);
+console.log(arr);
+// 传值(深拷贝)
+var arr=[1,2,3,4,5];
+var arr1=[];
+for(var i=0;i<arr.length;i++){
+	arr1[i]=arr[i];
+}
+arr1[1]='a';
+arr[3]='x';
+console.log(arr1);
+console.log(arr);
+
+
+
+
+var arr=[1,2,3,4,5,['a','b','c','d']];
+var newarr=copy(arr);
+newarr[2]='x';
+arr[5][1]='y';
+console.log(newarr);
+console.log(arr);
+function copy(arr){
+	var newarr=[];
+	for(var i=0;i<arr.length;i++){
+		if(typeof arr[i]=='object'){
+			newarr[i]=copy(arr[i]);
+		}else{
+			newarr[i]=arr[i];
+		}
+	}
+	return newarr;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

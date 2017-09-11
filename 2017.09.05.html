@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		document.write('<table border=1 cellspacing=0 width=800 height=500 align=center>')
+			for (var i = 1; i <=10; i++) {
+				document.write('<tr align=center >')
+					for(var j=1; j<=10; j++) {
+						document.write('<td>'+i+'-'+j+'</td>')
+					}
+				document.write('</tr>')
+				document.write('<br />')
+		}
+		document.write('</table>')	
+		// 九九乘法表 列
+		document.write('<table border=1 cellspacing=0 width=800 height=500 align=center>')
+			for (var i = 1; i < 10; i++) {
+				document.write('<tr align=center>')
+					for(var j=1; j<=i; j++) {
+						// document.write('<td >'+j+'*'+i+'</td>')
+						if (j%2==1) {
+							document.write('<td bgcolor=yellow>'+j+'*'+i+'</td>')
+						}else{
+							document.write('<td bgcolor=red>'+j+'*'+i+'</td>')
+						}
+					}
+				document.write('</tr>')
+				document.write('<br />')
+		}
+		document.write('</table>')
+		// 九九乘法表 行
+		document.write('<table border=1 cellspacing=0 width=800 height=500 align=center>')
+			for (var i = 1; i < 10; i++) {
+				// document.write('<tr align=center>')
+				if (i%2==0) {
+					document.write('<tr align=center bgcolor=pink>')
+				}else{
+					document.write('<tr align=center bgcolor=green>')
+				}
+					for(var j=1; j<=i; j++) {
+						document.write('<td >'+j+'*'+i+'</td>')
+					}
+				document.write('</tr>')
+				document.write('<br />')
+		}
+		document.write('</table>')
+
+		// 乘号
+		for (var i = 1;i<=10;i++) {
+				document.write('<tr>'+'*'+'</tr>')
+				// document.write('<br />')
+					for (var j = 1; j<=10;j++) {
+						document.write('<td>'+'*'+'</td>')
+				}
+				document.write('<br />')
+		}
+	</script>
+</body>
+</html>
