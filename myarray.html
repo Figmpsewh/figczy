@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Myarray</title>
+</head>
+<body>
+	<script>
+		let arr = new myArray('a','b','c','d',1,2,4,5);
+		arr.push('x','y','z');
+		console.log(arr);
+
+		let index = arr.indexOf('c');
+		console.log(index);
+
+		let index1 = arr.lastIndexOf(1);
+		console.log(index1);
+
+		let includ = arr.includes(2);
+		console.log(includ);
+
+		let joi = arr.join('+')
+		console.log(joi)
+
+
+		let reve = arr.reverse(arr)
+		console.log(reve);
+
+		let arr4 = new myArray(1,3,5,7,9);
+		let sort1 = arr4.sortup();
+		console.log(sort1);
+		let sort2 = arr4.sortdown();
+		console.log(sort2);
+
+		let som = arr.some(function(value){
+			return value<3;
+		})
+		console.log(som);
+
+		let arr3 = new myArray(1,2,3,4,5)
+		let eve =arr3.every(function(value){
+			return typeof value=='string';
+		})
+		console.log(eve);
+
+		let arr1 = new myArray(1,1,3,4,6,7)
+		let ma = arr1.map(function(value){
+			return value*3;
+		})
+		console.log(ma);
+
+		let arr2 = new myArray(1,2,3,4,5,6,7)
+		let fil = arr2.filed(function(value){
+			return value>4;
+		})
+		console.log(fil);
+
+		let max = arr2.max();
+		console.log(max);
+
+		let min = arr2.min();
+		console.log(min);
+
+		let arr5=new myArray(1,2,4,5,6,undefined,8,9,10,45);
+		let go=arr5.go();
+		console.log(go);
+
+
+
+
+		
+		function myArray(){
+			for(let i=0;i<arguments.length;i++){
+				this[i]=arguments[i];
+			}
+			this.length = arguments.length;
+			//添加方法
+			this.push = function(){
+				for(let i=0;i<arguments.length;i++){
+					this[this.length]=arguments[i];
+					this.length++;
+				}
+			}
+			//查找初始位置
+			this.indexOf = function(value){
+				for(let i=0;i<this.length;i++){
+					if(this[i]==value){
+						return i;
+					}
+				}
+				return -1;
+			}
+			//查找最后位置
+			this.lastIndexOf = function(value){
+				for(let i=this.length;i>-1;i--){
+					if(this[i]==value){
+						return i;
+					}
+				}
+				return -2;
+			}
+
+			//包含
+			this.includes = function(value){
+				for(let i=0;i<this.length;i++){
+					if(this[i]==value){
+						return true;
+					}
+				}
+				return false;
+			}
+
+			//把数组转化成字符串
+			this.join = function(str){
+				let result='';
+				for(let i=0;i<this.length;i++){
+					if(i<this.length-1){
+						result+=this[i]+str;
+					}else{
+						result+=this[i]
+					}
+				}
+				return result;
+			}
+
+			//翻转数组
+			this.reverse = function(arr){
+				let newarr=[];
+				for(let i=this.length-1;i>-1;i--){
+					newarr[newarr.length]=this[i];
+				}
+				return newarr;
+			}
+			//排序
+			this.sort = function(type){
+				type=type==undefined?'<':type;
+				if(type=='<'){
+					sortup(this)
+				}else if(type=='>'){
+					sortdown(this);
+				}
+			}
+			//升序
+			this.sortup = function(){
+				for(let i=0;i<this.length;i++){
+					for(let j=i+1;j<this.length;j++){
+						if(this[j]<this[i]){
+							let temp=this[j];
+							this[j]=this[i];
+							this[i]=temp;
+						}
+					}
+				}
+				return this;
+			}
+			//降序
+			this.sortdown = function(){
+				for(let i=0;i<this.length;i++){
+					for(let j=i+1;j<this.length;j++){
+						if(this[j]>this[i]){
+							let temp=this[j];
+							this[j]=this[i];
+							this[i]=temp;
+						}
+					}
+				}
+				return this;
+			}
+			//有一个条件符合some
+			this.some = function(fn){
+				for(let i=0;i<this.length;i++){
+					if(fn(this[i])){
+						return true;
+					}
+				}
+				return false;
+			}
+			//每个条件都满足
+			this.every = function(fn){
+				for(let i=0;i<this.length;i++){
+					if(!fn(this[i])){
+						return false;
+					}
+				}
+				return true;
+			}
+			// 映射
+			this.map = function(fn){
+				let newarr=[];
+				for(let i=0;i<this.length;i++){
+					newarr[newarr.length]=fn(this[i]);
+				}
+				return newarr;
+			}
+			//回调函数
+			this.filed = function(fn){
+				let newarr=[];
+				for(let i=0;i<this.length;i++){
+					if(fn(this[i])){
+						newarr[newarr.length]=this[i];
+					}
+				}
+				return newarr;
+			}
+			//取最大值
+			this.max = function(){
+				let max=this[0];
+				for(let i=0;i<this.length;i++){
+					if(max<this[i]){
+						max=this[i]
+					}
+				}
+				return max;
+			}
+			//取最小值
+			this.min = function(){
+				let min=this[0];
+				for(let i=0;i<this.length;i++){
+					if(min>this[i]){
+						min=this[i]
+					}
+				}
+				return min;
+			}
+			//去空
+			this.go = function(){
+				let newarr=[];
+				let j=0;
+				for(let i=0;i<this.length;i++){
+					if (this[i]!==undefined) {
+						newarr[j]=this[i];
+						j++;
+					}
+				}
+				return newarr;
+			}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		}
+		
+		
+	</script>
+</body>
+</html>

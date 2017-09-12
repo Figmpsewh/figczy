@@ -110,7 +110,7 @@ function filter(arr,big){
 	}
 	return newarr;
 }
-var result=filter(arr,function(value){2
+var result=filter(arr,function(value){
 	return value>4;
 })
 console.log(result);
@@ -147,7 +147,7 @@ var result=reverse(arr);
 console.log(result);
 function reverse(arr){
 	var newarr=[];
-	for(var i=arr.length;i>-1;i--){
+	for(var i=arr.length-1;i>-1;i--){
 		push(newarr,arr[i]);
 	}
 	return newarr;
