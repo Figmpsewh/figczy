@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<div id="box" style="width: 400px;height: 400px;background: red"></div>
+	<script>
+		//Math		Math		Math		Math
+		//
+		//
+		
+		
+		//abs 绝对值
+		console.log(Math.abs(10));
+		console.log(Math.abs(-10));
+		console.log(Math.abs(-20));			
+		console.log(Math.max(1,2,3,5,8,80));	//最大值
+		console.log(Math.min(1,2,3,5,8,80));	//最小值
+
+		//近似值
+		console.log(Math.round(10.5));		// 11
+		console.log(Math.round(-10.4));		//-10
+		console.log(Math.round(-0.45));		//-0
+		console.log(Math.round(0.45));		//0
+
+		//ceil 向上取最小的整数
+		console.log(Math.ceil(4.5));		//5
+		console.log(Math.ceil(-5.3));		//-5
+
+		//floor 向下取最小的整数
+		console.log(Math.floor(5.5));		//5
+		console.log(Math.floor(-10.5));		//-11
+
+		//random 取随机数 范围是0-1
+		for(let i=0;i<10;i++){
+		console.log(Math.random()*10);    //乘以一个数字便是0到这个数字的范围 0~10
+
+		console.log(Math.random()*10+10);	//10~20
+
+		console.log(Math.random()*15+5);	//5~20
+		}	
+
+	//换页面中的颜色
+	//0~255
+	function color(){
+		let str = 'rgb('
+		for(let i=0;i<3;i++){
+		let num = Math.round(Math.random()*255);
+		str+=num+',';
+		}
+		str = str.slice(0,-1);
+		str+=")";
+		return str;
+	}
+
+
+
+
+	let box=document.getElementById('box');
+	box.onmouseover = function(){
+		box.style.background = color();
+	}
+
+		//pow 求x的y次方
+		console.log(Math.pow(2,3));    	//8
+		//sqrt 求x的开方
+		console.log(Math.sqrt(2))		//1.414
+
+
+		//例子	求随机数
+		let arr = ['a','b','c','d','e'];
+		// let result = shu(arr,3);
+		// console.log(result)
+		// function shu(arr,num){
+		// 	let newarr=[];										//方法一
+		// 	for(let i=0;i<num;i++){
+		// 	let index = Math.floor(Math.random()*arr.length);	
+		// 	while(newarr.includes(arr[index])){
+		// 		index = Math.floor(Math.random()*arr.length);
+		// 	}
+		// 	newarr.push(arr[index]);
+		// 	}
+		// 	return newarr;
+		// }
+		let result1=randomArr(arr,4);
+		console.log(result1)
+		function randomArr(arr,num){
+			let newarr=[];
+			while(newarr.length<num){
+				let index = Math.floor(Math.random()*arr.length);	//方法二
+				if(!newarr.includes(arr[index])){
+					newarr.push(arr[index]);	
+				}
+			}
+			return newarr;
+		}
+	</script>
+</body>
+</html>
