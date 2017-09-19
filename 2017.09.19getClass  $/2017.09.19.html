@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="0919.js"></script>
+</head>
+<body>
+    <div class="one">                  <!-- 1 -->
+		<div class="box"></div>      <!-- 2 -->
+		<div class="box box1"></div>   <!-- 3 -->
+	</div>
+	<div id="one"></div>
+	<div class="box box1"></div>
+	<div class="box box1"></div>
+	<div class="box1 box2"></div>
+	<script>
+//兼容性----用getElementsByTagName来模拟getElementsByClassName
+	// window.onload=function(){
+	//     var box = getClass('box');
+	//     for(var i=0;i<box.length;i++){
+	//     	box[i].innerHTML='这是一个div'
+	//     }
+ //    }
+//当一个div 有多个类名时
+	// window.onload=function(){
+	//     var box = getClass1('box');
+	//     for(var i=0;i<box.length;i++){
+	//     	box[i].innerHTML='这是一个div'
+	//     }
+ //    }
+// 当有指定范围(ranger)时
+	// window.onload=function(){
+	//     var box = getClass2('one');
+	//     var box1 = getClass2('box',one[0]);
+	//     for(var i=0;i<box.length;i++){
+	//     	box[i].innerHTML='这是一个div'
+	//     }
+ //    }
+    
+
+
+//获取指定元素 $(select)
+    window.onload=function(){
+    	$('#one').innerHTML='这是一个id';
+    	$('.box')[0].innerHTML='这是一个div';
+    	$('div')[0].innerHTML='sadsasd';
+    	var aaa=$('div');
+    	console.log(aaa.length);
+    //问题:
+    //   当$('div')[0].innerHTML='sadsasd';时  console.log(aaa.length);----5
+    //   当$('div')[2].innerHTML='sadsasd';时  console.log(aaa.length);----7
+
+    }
+	</script>
+</body>
+</html>

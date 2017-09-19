@@ -16,6 +16,20 @@
 				document.write('<br />')
 		}
 		document.write('</table>')	
+
+
+
+
+		document.write('<table border=1 cellspacing=0 width=600 height=600 align=center>')
+			for(var i = 1;i<=10;i++){
+				document.write('<tr align=center>')
+					for(var j = 1;j<=10;j++){
+						document.write('<td>'+i+'-'+j+'</td>')
+					}	
+					document.write('</tr>')
+					document.write('<br/>')
+			}
+			document.write('</table>')
 		// 九九乘法表 列
 		document.write('<table border=1 cellspacing=0 width=800 height=500 align=center>')
 			for (var i = 1; i < 10; i++) {
@@ -25,7 +39,7 @@
 						if (j%2==1) {
 							document.write('<td bgcolor=yellow>'+j+'*'+i+'</td>')
 						}else{
-							document.write('<td bgcolor=red>'+j+'*'+i+'</td>')
+							document.write('<td bgcolor=red>'+j+'*'+i+'='+i*j+'</td>')
 						}
 					}
 				document.write('</tr>')
@@ -58,6 +72,26 @@
 				}
 				document.write('<br />')
 		}
+
+
+
+
+		//九九乘法表
+		
+	function table(str){
+		document.write('<table border=1 cellspacing=0 width=400 height=500>')
+		for(let i=1;i<=str;i++){
+			document.write('<tr align=center>')
+				for(let j=1;j<=i;j++){
+					document.write('<td>'+i+'*'+j+'='+i*j+'</td>')
+				}
+				document.write('</tr>')
+				document.write('<br/>')
+		}
+		document.write('</table>')
+	}
+	let result = table(9);
+	document.write(result);
 	</script>
 </body>
 </html>
