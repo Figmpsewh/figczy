@@ -1,0 +1,249 @@
+/*
+* @Author: asus
+* @Date:   2017-09-19 23:13:53
+* @Last Modified by:   asus
+* @Last Modified time: 2017-10-16 08:51:32
+*/
+@import url(base.css);
+/* 头部开始 */
+body{
+	background: #eeeeee;
+}
+.top{
+	height: 252px;
+	width: 100%;
+	background: url('../img/top.jpg') no-repeat;
+}
+.top-t{
+	height: 160px;
+	width: 1226px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.top-td{
+	width: 466px;
+	height: 147px;
+	background: url('../img/20170504095353_13092.png') no-repeat;
+	margin: 0 auto;
+}
+.top-n{
+	height: 52px;
+	width: 100%;
+	background: rgba(204, 204, 204, 0.4);
+	margin-top: 20px;
+}
+.top-b{
+	height: 52px;
+	width: 1226px;
+	margin: 0 auto;
+	display: flex;
+}
+.top-b>li{
+	height: 52px;
+	padding: 0 45px;
+	background: rgba(204, 204, 204, 0.0);
+	justify-content: space-between;
+	cursor:pointer;
+}
+.top-b>li:nth-child(3){
+	background: #999;
+
+}
+.top-b>li>a{
+	font-size: 22px;
+	color: #000;
+	line-height: 52px;
+}
+.top-b>li>.third{
+	color: #fff;
+}
+.top-b>li:hover{
+	background: #999;
+}
+.top-b>li:hover a{
+	color: #fff;
+}
+/* 头部结束 */
+/* 古玩与我们开始 */
+.about{
+	width: 100%;
+	height: 1439px;
+	background: #eeeeee;
+}
+.about-t{
+	width: 100%;
+	height: 113px;
+	border-bottom: 1px solid #999;
+}
+.about-tt{
+	width: 1100px;
+	height: 113px;
+	margin: 0 auto;
+	background: #eeeeee;
+}
+.about-tl{
+	float: left;
+	width: 194px;
+	height: 112px;
+	background: url('../img/yc.png') no-repeat left bottom;
+	line-height: 112px;
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+}
+.about-b{
+	width: 1100px;
+	height: 600px;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+.about-bl{
+	width: 444px;
+	height: 442px;
+	/* background: red; */
+	float: left;
+}
+.about-bl>span{
+	font-size: 18px;
+	color: #000;
+}
+.about-br{
+	width: 600px;
+	height: 442px;
+	/* background: yellow; */
+	float: right;
+}
+.about-br>img{
+	width: 600px;
+	height: 442px;
+	display: block;
+}
+/* banner开始 */
+.banner{
+	width: 1226px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.banner-l>li{
+	width: 1226px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 1226px;
+}
+.banner-l>li:first-child{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.banner-l>li>img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.icon-l>i{
+	position: absolute;
+	font-size: 50px;
+	color: #888;
+	left: 10px;
+	top: 50%;
+	display: block;
+	cursor: pointer;
+}
+.icon-r>i{
+	position: absolute;
+	font-size: 50px;
+	color: #888;
+	top: 50%;
+	right: 10px;
+	display: block;
+	cursor: pointer;
+}
+/* banner结束 */
+.design{
+	width: 100%;
+	height: 654px;
+	background: #eeeeee;
+	padding-top: 20px;
+}
+.active{
+	width: 1100px;
+	height: 410px;
+	/* background: yellow; */
+	margin: 0 auto;
+	position: relative;
+	/* overflow: hidden; */
+}
+/* .active>li{
+	width: 100%;
+	height: 100%;
+	background: pink;
+	position: absolute;
+	left: 0;
+	top: 0;
+	display: flex;
+} */
+.active>div{
+	width: 248px;
+	height: 410px;
+	background: #ccc;
+	margin-left: 89px;
+	float: left;
+	margin-top: 15px;
+}
+.active>div>img{
+	width: 248px;
+	/* height: 294px; */
+	display: block;
+}
+.active>div>span{
+	color: #888;
+	font-size: 20px;
+	display: block;
+	margin-left: 70px;
+}
+.acb{
+	width: 248px;
+	height: 20px;
+	margin-top: 66px;
+}
+.active>div:hover{
+	background: #999;
+}
+.active>div:hover span{
+	color: #fff;
+}
+
+/* 尾部开始 */
+.last{
+	width: 100%;
+	height: 130px;
+	background: #fff;
+	padding-top: 20px;
+}
+.last-l{
+	width: 422px;
+	height: 120px;
+	float: left;
+	margin-left: 90px;
+}
+.last-ll{
+	width: 97px;
+	height: 98px;
+	background: url('../img/20170504095726_65480.png') no-repeat center center;
+	float: left;
+}
+.last-lr{
+	margin-left: 10px;
+	font-size: 16px;
+	color: #ccc;
+}
+.last-r{
+	width: 422px;
+	height: 30px;
+	float: right;
+	margin-right: 90px;
+	color: #ccc;
+}

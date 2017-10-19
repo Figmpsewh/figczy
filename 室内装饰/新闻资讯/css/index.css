@@ -1,0 +1,282 @@
+/*
+* @Author: asus
+* @Date:   2017-09-19 23:13:53
+* @Last Modified by:   asus
+* @Last Modified time: 2017-10-16 23:25:27
+*/
+@import url(base.css);
+/* 头部开始 */
+body{
+	background: #eeeeee;
+}
+.top{
+	height: 252px;
+	width: 100%;
+	background: url('../img/top.jpg') no-repeat;
+}
+.top-t{
+	height: 160px;
+	width: 1226px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.top-td{
+	width: 466px;
+	height: 147px;
+	background: url('../img/20170504095353_13092.png') no-repeat;
+	margin: 0 auto;
+}
+.top-n{
+	height: 52px;
+	width: 100%;
+	background: rgba(204, 204, 204, 0.4);
+	margin-top: 20px;
+}
+.top-b{
+	height: 52px;
+	width: 1226px;
+	margin: 0 auto;
+	display: flex;
+}
+.top-b>li{
+	height: 52px;
+	padding: 0 45px;
+	background: rgba(204, 204, 204, 0.0);
+	justify-content: space-between;
+	cursor:pointer;
+}
+.top-b>li:nth-child(5){
+	background: #999;
+
+}
+.top-b>li>a{
+	font-size: 22px;
+	color: #000;
+	line-height: 52px;
+}
+.top-b>li>.five{
+	color: #fff;
+}
+.top-b>li:hover{
+	background: #999;
+}
+.top-b>li:hover a{
+	color: #fff;
+}
+/* 头部结束 */
+/* 古玩与我们开始 */
+.about{
+	width: 100%;
+	height: 800px;
+	background: #eeeeee;
+}
+.about-t{
+	width: 100%;
+	height: 113px;
+	border-bottom: 1px solid #999;
+}
+.about-tt{
+	width: 1100px;
+	height: 113px;
+	margin: 0 auto;
+	background: #eeeeee;
+}
+.about-tl{
+	float: left;
+	width: 194px;
+	height: 112px;
+	background: url('../img/yc.png') no-repeat left bottom;
+	line-height: 112px;
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+}
+.about-tr{
+	float: left;
+	/* background: red; */
+	width: 600px;
+	height: 112px;
+
+}
+.about-tr>li>a{
+	display: block;
+	float: left;
+	line-height: 112px;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	margin-left: 40px;
+}
+.about-tr>li>a:hover{
+	color: #ccc;
+}
+.example-l{
+	width: 1100px;
+	height: 848px;
+	/* background: red; */
+	margin: 0 auto;
+}
+.example-l>li{
+	width: 354px;
+	height: 394px;
+	/* background: yellow; */
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	text-align: center;
+}
+.example-l>li>img{
+	width: 354px;
+	height: 354px;
+}
+.example-l>li>a{
+	line-height: 40px;
+	color: #000;
+}
+.example-b{
+	width: 1100px;
+	height: 24px;
+	/* background: yellow; */
+	margin: 0 auto;
+	padding-left: 320px;
+}
+.example-b>li{
+	float:left;
+	margin-left: 10px;
+	padding: 0 20px;
+	background: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px;
+	cursor: pointer;
+}
+/* 装修攻略开始 */
+.gong{
+	width: 100%;
+	height: 600px;
+    /* background: url('../img/news.jpg') no-repeat top center; */
+    padding-top: 20px;
+}
+.gong-l>li{
+	width: 540px;
+	height: 160px;
+	float: left;
+	margin-left: 90px;
+	margin-top: 10px;
+}
+.gll{
+	width: 110px;
+	height: 160px;
+	background: url('../img/news1.png') no-repeat center center;
+	float: left;
+	line-height: 160px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+}
+.glr{
+	width: 410px;
+	height: 140px;
+/* 	background: pink; */
+	float: right;
+	border-bottom: 1px solid #999;
+	padding-top: 20px;
+	color: #000;
+	cursor: pointer;
+}
+.glr:hover{
+	color: #888;
+}
+.gong-b{
+	width: 64px;
+	height: 40px;
+	background: url('../img/more.png') no-repeat center center;
+	margin: 562px auto 0;
+}
+.lian{
+	width: 100%;
+	height: 30px;
+	background: #999;
+	float: left;
+}
+
+
+
+
+/* banner开始 */
+.banner{
+	width: 1226px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.banner-l>li{
+	width: 1226px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 1226px;
+}
+.banner-l>li:first-child{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.banner-l>li>img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.icon-l>i{
+	position: absolute;
+	font-size: 50px;
+	color: #888;
+	left: 10px;
+	top: 50%;
+	display: block;
+	cursor: pointer;
+}
+.icon-r>i{
+	position: absolute;
+	font-size: 50px;
+	color: #888;
+	top: 50%;
+	right: 10px;
+	display: block;
+	cursor: pointer;
+}
+/* banner结束 */
+
+
+/* 尾部开始 */
+.last{
+	width: 100%;
+	height: 130px;
+	background: #fff;
+	padding-top: 20px;
+}
+.last-l{
+	width: 422px;
+	height: 120px;
+	float: left;
+	margin-left: 90px;
+}
+.last-ll{
+	width: 97px;
+	height: 98px;
+	background: url('../img/20170504095726_65480.png') no-repeat center center;
+	float: left;
+}
+.last-lr{
+	margin-left: 10px;
+	font-size: 16px;
+	color: #ccc;
+}
+.last-r{
+	width: 422px;
+	height: 30px;
+	float: right;
+	margin-right: 90px;
+	color: #ccc;
+}

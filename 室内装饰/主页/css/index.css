@@ -1,0 +1,473 @@
+/*
+* @Author: asus
+* @Date:   2017-09-19 23:13:53
+* @Last Modified by:   asus
+* @Last Modified time: 2017-10-16 22:42:42
+*/
+@import url(base.css);
+/* 头部开始 */
+.top{
+	height: 252px;
+	width: 100%;
+	background: url('../img/top.jpg') no-repeat;
+}
+.top-t{
+	height: 160px;
+	width: 1226px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.top-td{
+	width: 466px;
+	height: 147px;
+	background: url('../img/20170504095353_13092.png') no-repeat;
+	margin: 0 auto;
+}
+.top-n{
+	height: 52px;
+	width: 100%;
+	background: rgba(204, 204, 204, 0.4);
+	margin-top: 20px;
+}
+.top-b{
+	height: 52px;
+	width: 1226px;
+	margin: 0 auto;
+	display: flex;
+}
+.top-b>li{
+	height: 52px;
+	padding: 0 45px;
+	background: rgba(204, 204, 204, 0.0);
+	justify-content: space-between;
+	cursor:pointer;
+}
+.top-b>li:first-child{
+	background: #999;
+
+}
+.top-b>li>a{
+	font-size: 22px;
+	color: #000;
+	line-height: 52px;
+}
+.top-b>li>.first{
+	color: #fff;
+}
+.top-b>li:hover{
+	background: #999;
+}
+.top-b>li:hover a{
+	color: #fff;
+}
+/* 头部结束 */
+
+
+
+
+/* banner开始 */
+.banner{
+	width: 1226px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.banner-l>li{
+	width: 1226px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 1226px;
+}
+.banner-l>li:first-child{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.banner-l>li>img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.icon_l>i{
+	position: absolute;
+	font-size: 50px;
+	color: #888;
+	left: 10px;
+	top: 50%;
+	display: block;
+	cursor: pointer;
+}
+.icon-r>i{
+	position: absolute;
+	font-size: 50px;
+	color: #888;
+	top: 50%;
+	right: 10px;
+	display: block;
+	cursor: pointer;
+}
+/* banner结束 */
+/* 关于我们开始 */
+.us{
+	background: url('../img/about.jpg') no-repeat top center;
+    width: 100%;
+    height: 701px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 40px;
+}
+.us-d{
+	width: 1226px;
+	height: 100%;
+	margin: 0 auto;
+}
+.us-dt{
+	width: 100%;
+	height: 86px;
+	background: url('../img/cokk.png') no-repeat bottom center;
+	font-size: 28px;
+	color: #000;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+.us-dc{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	padding-top: 50px;
+}
+.us-b{
+	width: 400px;
+	height: 120px;
+	margin: 40px auto;
+	background: url('../img/gjjs.png') no-repeat center center;
+}
+/* 设计团队开始 */
+.design{
+	width: 100%;
+	height: 654px;
+	background: url('../img/sjtd.jpg') no-repeat center center;
+	padding-top: 20px;
+}
+.design-t{
+	width: 100%;
+	height: 86px;
+	background: url('../img/cokk.png') no-repeat bottom center;
+	text-align: center;
+	font-size: 28px;
+	color: #000;
+}
+.active{
+	width: 1100px;
+	height: 410px;
+	/* background: yellow; */
+	margin: 20px auto;
+	position: relative;
+	overflow: hidden;
+}
+.active1{
+	width: 100%;
+	height: 100%;
+	/* background: pink; */
+	position: absolute;
+	left: 1100px;
+	top: 0;
+	display: flex;
+}
+.active2{
+	position: absolute;
+	left: 0px;
+	top: 0;
+	display: flex;
+}
+.design-b{
+	width: 64px;
+	height: 40px;
+	background: url('../img/more.png') no-repeat center center;
+	margin: 100px auto;
+}
+.active>li>div{
+	width: 248px;
+	height: 410px;
+	background: #eeeeee;
+	margin-left: 89px;
+}
+.active>li>div>img{
+	width: 248px;
+	/* height: 294px; */
+	display: block;
+}
+.active>li>div>span{
+	color: #888;
+	font-size: 20px;
+	display: block;
+	margin-left: 70px;
+}
+.acb{
+	width: 248px;
+	height: 20px;
+	margin-top: 66px;
+}
+.active>li>div:hover{
+	background: #999;
+}
+.active>li>div:hover span{
+	color: #fff;
+}
+.dlj{
+	width: 24px;
+	height: 75px;
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	left: 0;
+	top: 50%;
+	cursor: pointer;
+}
+.dlj>i{
+	font-size: 20px;
+	line-height: 75px;
+	text-align: center;
+	color: #fff;
+}
+.drj{
+	width: 24px;
+	height: 75px;
+	background: rgba(0, 0, 0, 0.7);
+	position: absolute;
+	right: 0;
+	top: 50%;
+	cursor: pointer;
+}
+.drj>i{
+	font-size: 20px;
+	line-height: 75px;
+	text-align: center;
+	color: #fff;
+}
+
+
+/* 设计案例开始 */
+.example{
+	width: 100%;
+	height: 631px;
+	background: #eeeeee;
+	padding-top: 20px;
+}
+.example-t{
+	width: 100%;
+	height: 86px;
+	background: url('../img/cokk.png') no-repeat bottom center;
+	text-align: center;
+	font-size: 28px;
+	color: #000;
+}
+.example-d{
+	position: relative;
+
+}
+.example-l{
+	width: 1100px;
+	height: 409px;
+	/* background: yellow; */
+	margin: 20px auto;	
+	position: relative;
+	overflow: hidden;
+}
+.example-l>li{
+	width: 1100px;
+	height: 357px;
+	/* background: blue; */
+	border-bottom: 4px solid #000;
+	position: absolute;
+	left: 1100px;
+	top: 0;
+}
+.example-l>li:first-child{
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.example-l>li>img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.btn{
+	width: 100%;
+	height: 10px;
+	padding: 3px 0;
+	/* background: red; */
+	position: absolute;
+	bottom: 20px;
+}
+.btn-l{
+	width: 120px;
+	height: 10px;
+	/* background: yellow; */
+	margin: 0 auto;
+}
+.btn-l>li{
+	width: 10px;
+	height: 10px;
+	background: #999;
+	border-radius: 50%;
+	float: left;
+	margin-left: 10px;
+}
+.btn-l>li:first-child{
+	margin-left: 5px;
+}
+.example-b{
+	width: 64px;
+	height: 40px;
+	background: url('../img/more.png') no-repeat center center;
+	margin: 78px auto 0;
+}
+
+/* 用户评价开始 */
+.user{
+	width: 100%;
+	height: 629px;
+	padding-top: 20px;
+	background: url('../img/pingjia.jpg') no-repeat center center;
+}
+.user-t{
+	width: 100%;
+	height: 86px;
+	background: url('../img/cokk.png') no-repeat bottom center;
+	text-align: center;
+	font-size: 28px;
+	color: #000;
+}
+.user-l{
+	width: 1100px;
+	height: 412px;
+	/* background: red; */
+	margin: 20px auto;
+	padding-top: 20px;
+}
+.user-l>li{
+	width: 239px;
+	height: 134px;
+	display: block;
+	/* background: blue; */
+	float: left;
+	margin-left: 127px;
+	color: #ccc;
+	cursor: pointer;
+}
+.user-l>li>h5{
+	color: #000;
+	text-align: center;
+}
+.user-l>li:first-child{
+	margin-left: 64px;
+}
+.user-l>li:nth-child(4){
+	margin-left: 64px;
+	margin-top: 40px;
+}
+.user-b{
+	width: 64px;
+	height: 40px;
+	background: url('../img/more.png') no-repeat center center;
+	margin: 50px auto 0;
+}
+/* 装修攻略开始 */
+.gong{
+	width: 100%;
+	height: 717px;
+    background: url('../img/news.jpg') no-repeat top center;
+    padding-top: 20px;
+}
+.gong-t{
+	width: 100%;
+	height: 86px;
+	background: url('../img/cokk.png') no-repeat bottom center;
+	text-align: center;
+	font-size: 28px;
+	/* color: #000; */
+}
+.gong-l>li{
+	width: 540px;
+	height: 160px;
+	float: left;
+	margin-left: 90px;
+	margin-top: 10px;
+}
+.gll{
+	width: 110px;
+	height: 160px;
+	background: url('../img/news1.png') no-repeat center center;
+	float: left;
+	line-height: 160px;
+	text-align: center;
+	color: #fff;
+	font-size: 14px;
+
+}
+/* .gll>img{
+	width: 110px;
+	height: 120px;
+	display: block;
+} */
+.glr{
+	width: 410px;
+	height: 140px;
+/* 	background: pink; */
+	float: right;
+	border-bottom: 1px solid #999;
+	padding-top: 20px;
+	color: #000;
+	cursor: pointer;
+}
+.glr:hover{
+	color: #888;
+}
+.gong-b{
+	width: 64px;
+	height: 40px;
+	background: url('../img/more.png') no-repeat center center;
+	margin: 562px auto 0;
+}
+.lian{
+	width: 100%;
+	height: 30px;
+	background: #999;
+	float: left;
+}
+
+
+/* 尾部开始 */
+.last{
+	width: 100%;
+	height: 130px;
+	background: #fff;
+	padding-top: 20px;
+}
+.last-l{
+	width: 422px;
+	height: 120px;
+	float: left;
+	margin-left: 90px;
+}
+.last-ll{
+	width: 97px;
+	height: 98px;
+	background: url('../img/20170504095726_65480.png') no-repeat center center;
+	float: left;
+}
+.last-lr{
+	margin-left: 10px;
+	font-size: 16px;
+	color: #ccc;
+}
+.last-r{
+	width: 422px;
+	height: 30px;
+	float: right;
+	margin-right: 90px;
+	color: #ccc;
+}

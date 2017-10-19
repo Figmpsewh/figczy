@@ -1,0 +1,288 @@
+/*
+* @Author: asus
+* @Date:   2017-09-19 23:13:53
+* @Last Modified by:   asus
+* @Last Modified time: 2017-10-16 23:21:01
+*/
+@import url(base.css);
+/* 头部开始 */
+body{
+	background: #eeeeee;
+}
+.top{
+	height: 252px;
+	width: 100%;
+	background: url('../img/top.jpg') no-repeat;
+}
+.top-t{
+	height: 160px;
+	width: 1226px;
+	margin: 0 auto;
+	padding-top: 20px;
+}
+.top-td{
+	width: 466px;
+	height: 147px;
+	background: url('../img/20170504095353_13092.png') no-repeat;
+	margin: 0 auto;
+}
+.top-n{
+	height: 52px;
+	width: 100%;
+	background: rgba(204, 204, 204, 0.4);
+	margin-top: 20px;
+}
+.top-b{
+	height: 52px;
+	width: 1226px;
+	margin: 0 auto;
+	display: flex;
+}
+.top-b>li{
+	height: 52px;
+	padding: 0 45px;
+	background: rgba(204, 204, 204, 0.0);
+	justify-content: space-between;
+	cursor:pointer;
+}
+.top-b>li:nth-child(4){
+	background: #999;
+
+}
+.top-b>li>a{
+	font-size: 22px;
+	color: #000;
+	line-height: 52px;
+}
+.top-b>li>.four{
+	color: #fff;
+}
+.top-b>li:hover{
+	background: #999;
+}
+.top-b>li:hover a{
+	color: #fff;
+}
+/* 头部结束 */
+/* 古玩与我们开始 */
+.about{
+	width: 100%;
+	height: 1050px;
+	background: #eeeeee;
+}
+.about-t{
+	width: 100%;
+	height: 113px;
+	border-bottom: 1px solid #999;
+}
+.about-tt{
+	width: 1100px;
+	height: 113px;
+	margin: 0 auto;
+	background: #eeeeee;
+}
+.about-tl{
+	float: left;
+	width: 194px;
+	height: 112px;
+	background: url('../img/yc.png') no-repeat left bottom;
+	line-height: 112px;
+	text-align: center;
+	font-size: 24px;
+	color: #000;
+}
+.about-tr{
+	float: left;
+	/* background: red; */
+	width: 600px;
+	height: 112px;
+
+}
+.about-tr>li>a{
+	display: block;
+	float: left;
+	line-height: 112px;
+	text-align: center;
+	font-size: 16px;
+	color: #000;
+	margin-left: 40px;
+}
+.about-tr>li>a:hover{
+	color: #ccc;
+}
+.example-a{
+	position: relative;
+}
+.examplel{
+	width: 1100px;
+	height: 848px;
+	/* background: red; */
+	margin: 0 auto;
+}
+.examplel>li{
+	width: 354px;
+	height: 394px;
+	/* background: yellow; */
+	float: left;
+	margin-left: 10px;
+	margin-top: 20px;
+	text-align: center;
+}
+.examplel>li>img{
+	width: 354px;
+	height: 354px;
+}
+.examplel>li>a{
+	line-height: 40px;
+	color: #000;
+}
+div.mask{
+	width: 808px;
+	height: 608px;
+	position: absolute;
+	left: 0;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	background: red;
+	box-shadow: 0 0 0 1000px rgba(0, 0, 0, 0.7);
+	transform: scale(0, 0);
+	transition: 0.5s;
+}
+div.mask>img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+div.mask.active{
+		transform: scale(1, 1)
+	}
+div.close{
+		width: 50px;
+		height: 50px;
+		position: absolute;
+		right: -150px;
+		top: -25px;
+		background: url('../img/gb.png') center/cover;
+	}
+	div[class*=btn]{
+		width: 60px;
+		height: 80px;
+		background: pink;
+		position: absolute;
+	}
+	div.btnL{
+		background: url('../img/left.png') center/cover;
+	 	left: -100px;
+	 	top: 50%;
+	}
+	div.btnR{
+	background: url('../img/right.png') center/cover;
+	right: -100px;
+	top: 50%;
+	}
+
+
+
+
+
+.example-b{
+	width: 1100px;
+	height: 24px;
+	/* background: yellow; */
+	margin: 40px auto;
+	padding-left: 320px;
+}
+.example-b>li{
+	float:left;
+	margin-left: 10px;
+	padding: 0 20px;
+	background: #fff;
+	border: 1px solid #fff;
+	border-radius: 5px;
+	box-shadow: 1px 1px 1px;
+	cursor: pointer;
+}
+
+
+
+
+
+/* banner开始 */
+.banner{
+	width: 1226px;
+	height: 500px;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+}
+.banner-l>li{
+	width: 1226px;
+	height: 500px;
+	position: absolute;
+	top: 0;
+	left: 1226px;
+}
+.banner-l>li:first-child{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.banner-l>li>img{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.icon-l>i{
+	position: absolute;
+	font-size: 50px;
+	color: #888;
+	left: 10px;
+	top: 50%;
+	display: block;
+	cursor: pointer;
+}
+.icon-r>i{
+	position: absolute;
+	font-size: 50px;
+	color: #888;
+	top: 50%;
+	right: 10px;
+	display: block;
+	cursor: pointer;
+}
+/* banner结束 */
+
+
+/* 尾部开始 */
+.last{
+	width: 100%;
+	height: 130px;
+	background: #fff;
+	padding-top: 20px;
+}
+.last-l{
+	width: 422px;
+	height: 120px;
+	float: left;
+	margin-left: 90px;
+}
+.last-ll{
+	width: 97px;
+	height: 98px;
+	background: url('../img/20170504095726_65480.png') no-repeat center center;
+	float: left;
+}
+.last-lr{
+	margin-left: 10px;
+	font-size: 16px;
+	color: #ccc;
+}
+.last-r{
+	width: 422px;
+	height: 30px;
+	float: right;
+	margin-right: 90px;
+	color: #ccc;
+}
