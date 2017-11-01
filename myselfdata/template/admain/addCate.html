@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+<style>
+	body{
+		position: relative;
+	}
+	form{
+		width: 300px;
+		height:200px;
+		background: yellow;
+		position: absolute;
+		left:calc(50% - 150px);
+		top:100px;
+		display: flex;
+		justify-content: space-around;
+		flex-direction: column;
+	}
+	.formgroup{
+		width:100%;
+		height:100%;
+		background: aliceblue;
+	}
+	lable{
+		display: block;
+		width:100%;
+		height:30px;
+		/*background: red;*/
+		font-size: 14px;
+		color: #000;
+		text-align: center;
+		line-height: 30px;
+	}
+	select{
+		display: block;
+		width:100%;
+		height:30px;
+	}
+	.input1{
+		display: block;
+		width:100%;
+		height:30px;
+		/*background: skyblue;*/
+		border-radius: 4px;
+		margin-top: 5px;
+		/*outline:none;*/
+	}
+	.input2{
+		width:100%;
+		height:30px;
+		line-height: 30px;
+		text-align: center;
+		margin-top: 20px;
+	}
+</style>
+<div class="panel">
+	<form action="addCate.php" method="post">
+		<div class="formgroup">
+			<lable for="">父级栏目</lable>
+			<select name="pid" id="">
+				<option value="0">一级栏目</option>
+				<!--<option value="1">首页</option>-->
+				<!--<option value="2">旅游路线</option>-->
+				<!--<option value="3">私人订制</option>-->
+				<!--<option value="4">游记</option>-->
+				<!--<option value="5">关于我们</option>-->
+				<?php echo $option;?>
+			</select>
+		</div>
+		<div class="formgroup">
+			<lable for="">栏目名称:</lable>
+			<input type="text" name="cname" class="input1">
+		</div>
+		<div class="formgroup">
+			<input type='submit' name="sub" value="提交" class="input2">
+		</div>
+	</form>
+</div>
+</body>
+</html>

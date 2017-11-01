@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>title</title>
+	<link rel="stylesheet" href="../static/css/main.css">
+</head>
+<body>
+	<div class="header">
+		<div class="circle">
+			<div class="circle_l"></div>
+			<span>您好，超级管理员</span>
+			<span>查看前台</span>
+		</div>
+		<marquee behavior="" direction="" style="width:400px;height: 50px;background:#AEE5B1; margin-left: 260px;"><h3>后&nbsp;&nbsp;台&nbsp;&nbsp;管&nbsp;&nbsp;理&nbsp;&nbsp;系&nbsp;&nbsp;统</h3></marquee>
+		<a href="../admain/login.php">首页</a>
+	</div>
+	<div class="leftnav">
+		<h5>分类操作</h5>
+		<ul>
+			<li><a href="addCate.php" target="right">添加分类</a></li>
+			<li><a href="showCate.php" target="right">查看</a></li>
+		</ul>
+		<h5>分类操作</h5>
+		<ul>
+			<li><a href="" target="right">添加分类</a></li>
+			<li><a href="" target="right">查看</a></li>
+		</ul>
+	</div>
+	<div class="content">
+		<iframe src="" frameborder="0" name="right"></iframe>
+	</div>
+</body>
+<script src="../static/js/jquery-3.2.1.js"></script>
+<script>
+	$(function(){
+		$('.leftnav>h5').on('click',function(){
+        // $(this).toggleClass('col');
+        $(this).next().slideToggle();
+	})
+})
+</script>
+</html>

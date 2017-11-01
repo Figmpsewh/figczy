@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    body{
+        position: relative;
+    }
+    form{
+        width: 300px;
+        height:200px;
+        background: yellow;
+        position: absolute;
+        left:calc(50% - 150px);
+        top:100px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .formgroup{
+        width:100%;
+        height:100%;
+        background: aliceblue;
+    }
+    lable{
+        display: block;
+        width: 100%;
+        height:30px;
+        /*background:red;*/
+        font-size: 14px;
+        color: #000;
+        line-height: 30px;
+        text-align: center;
+    }
+    select{
+        display: block;
+        height: 30px;
+        width:300px;
+        background:#ECFFF4;
+    }
+    .inputa{
+        display: block;
+        width:290px;
+        height:30px;
+        margin:0 auto;
+        /*background:#ECFFF4;*/
+    }
+    .inputb{
+        display: block;
+        width:100%;
+        height:30px;
+        margin:20px auto;
+    }
+</style>
+<div class="panel">
+    <form action="updateCate.php" method="post">
+        <div class="formgroup">
+            <lable for="">父级栏目</lable>
+            <select name="pid" id="">
+                <option value="0">一级栏目</option>
+                <?php echo $str;?>
+            </select>
+        </div>
+        <div class="formgroup">
+            <lable for="">栏目名称</lable>
+            <input type="text" class="inputa" name="cname" value="<?php echo $cname;?>">
+        </div>
+        <input type="hidden" name="cid" value="<?php echo $cid;?>">
+        <div class="formgroup">
+            <input type='submit' class="inputb" name="sub" value="提交">
+        </div>
+    </form>
+</div>
+</body>
+</html>

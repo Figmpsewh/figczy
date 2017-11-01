@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+    body{
+        background: #B8FFD0;
+    }
+    .panel{
+        border:1px solid #cccccc;
+        border-radius: 5px;
+        min-height: 200px;
+        padding:15px;
+    }
+    .panelHeader{
+        width:100%;
+        height:40px;
+        font-size: 16px;
+        line-height: 30px;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        box-sizing: border-box;
+        font-weight: 400;
+    }
+    .panelContent{
+        width:100%;
+        height:auto;
+    }
+    table{
+        width:80%;
+        height:auto;
+        margin:15px auto;
+        border-collapse: collapse;
+        text-align: center;
+    }
+    td,th{
+        border:1px solid #cccccc;
+        padding:6px 16px;
+    }
+    tr:nth-of-type(2n){
+        background:#ffffff;
+    }
+    tr:nth-of-type(2n+1){
+        background:#f1f1f1;
+    }
+    tr>td>a:first-child{
+        display: block;
+        width:40px;
+        height:20px;
+        text-decoration: none;
+        color: #fff;
+        float: left;
+        /*margin-left: 160px;*/
+        background:#ff5151 ;
+        border-radius: 5px;
+    }
+    tr>td>a:last-child{
+        display: block;
+        width:40px;
+        height:20px;
+        background: #44d2de;
+        float: left;
+        /*margin-left: 40px;*/
+        text-decoration: none;
+        float: right;
+        color: rgb(23, 17, 20);
+        border-radius: 5px;
+    }
+</style>
+<body>
+    <div class="panel">
+        <div class="panelHeader">
+            展示分类
+        </div>
+        <div class="panelContent">
+            <table>
+                <tr>
+                    <th>父级id</th>
+                    <th>栏目名称</th>
+                    <th>父级栏目</th>
+                    <th>操作</th>
+                </tr>
+                <?php echo $option;?>
+                <!--<tr>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td></td>-->
+                    <!--<td>-->
+                        <!--<a href="">删除</a>-->
+                        <!--<a href="">修改</a>-->
+                    <!--</td>-->
+                <!--</tr>-->
+            </table>
+        </div>
+    </div>
+</body>
+</html>
